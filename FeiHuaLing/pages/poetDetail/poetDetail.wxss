@@ -1,0 +1,9 @@
+/* pages/poetDetail/poetDetail.wxss */
+.poet-content {
+  padding: 40rpx; /* 设置整体内容的内边距 */
+  background-image: url("https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/2.jpg?sign=9e8e6945f897c2af876465763b6ba438&t=1719124282"); /* 替换为你的背景图路径 */
+  background-size: cover; /* 背景图尺寸覆盖整个容器 */
+  background-repeat: no-repeat; /* 不重复显示背景图 */
+  background-position: center; /* 居中显示背景图 */
+  /* 可以根据需要设置其他背景样式，比如背景颜色 */
+}

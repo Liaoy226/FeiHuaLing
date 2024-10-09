@@ -1,0 +1,97 @@
+<view class="container">
+  <image class="background" src="../../images/GameStart-Background.png" mode="aspectFill"></image>
+
+  <view class="choice" wx:if="{{mode < 3}}" hidden="{{load}}">
+    <radio-group bindchange="bandleChange" style="display: flex; justify-content: center;">
+      <label class="radio-label">
+        <radio class="radio-style" color="#ff6347" value="simple" checked="{{recover[0]}}"></radio>
+        简单模式
+      </label>
+      <label class="radio-label">
+        <radio class="radio-style" color="#ff6347" value="difficult" checked="{{recover[1]}}"></radio>
+        困难模式
+      </label>
+      <label class="radio-label">
+        <radio class="radio-style" color="#ff6347" value="practice" checked="{{recover[2]}}"></radio>
+        练习模式
+      </label>
+    </radio-group>
+  </view>
+
+  <!-- vs -->
+  <!-- 可以将对战界面的显示和加载时区分开，目前是用的同一套 -->
+  <view wx:if="{{mode == 3}}" class="match-container">
+  <view class="avatar-container">
+    <image class="avatar bot" src="{{other_avatar}}"></image>
+    <view class="name bot-name">{{other_name}}</view>
+  </view>
+  <image class="vs" style="width:70px; height:70px;" src="../../images/vs.png"></image>
+  <view class="avatar-container">
+    <image class="avatar user" src="{{self_avatar}}"></image>
+    <view class="name user-name">{{self_name}}</view>
+  </view>
+</view>
+
+  <!-- 输入关键词和按钮 -->
+  <view class="start-container" wx:if="{{mode < 3}}" hidden="{{load}}">
+    <view class="input-wrapper">
+      <input class="input-keyword" placeholder="输入关键词" style="width:20vw" value="{{word}}" bindinput="input_word" disabled="{{cant_self || is_disable}}"></input>
+    </view>
+    <view class="button-group">
+      <button class="button random-btn" style="width:20vw" bindtap="random_word" disabled="{{is_disable}}">随机</button>
+      <button class="button begin-btn" style="width:20vw" bindtap="begin" disabled="{{is_disable}}">开始</button>
+      <button class="button end-btn" style="width:20vw" bindtap="end">结束</button>
+    </view>
+  </view>
+
+  <!-- 对战关键字 -->
+  <text wx:if="{{mode == 3}}" hidden="{{load}}" style="font-weight: bold; font-size: larger;">{{word}}</text>
+
+  <view class="score-and-countdown" hidden="{{load}}">
+
+<!-- 分数显示 -->
+<view class="score" hidden="{{load}}">
+  <view class="score-item" style="width:38vw;" wx:if="{{mode == 3}}">
+    <text class="label" style="font-weight: bold;">对手分数:</text>
+    <text class="value">{{other_score}}</text>
+  </view>
+  <view class="score-item" style="width:38vw">
+    <text class="label">当前分数:</text>
+    <text class="value" style="font-weight: bold; color: #ff0000;">{{self_score}}</text>
+  </view>
+  <view class="score-item" style="width:38vw" wx:if="{{mode < 3}}">
+    <text class="label">最高分数:</text>
+    <text class="value">{{best_score}}</text>
+  </view>
+</view>
+
+<!-- 倒计时显示 -->
+<view class="countdown-container" hidden="{{load}}">
+  <text class="countdown-text">{{countdown}}</text>
+</view>
+
+</view>
+
+  <!-- 聊天框 -->
+  <scroll-view class="chat-container" scroll-y="true" scroll-into-view="{{toView}}" style="height:300rpx" scroll-with-animation="true" hidden="{{load}}">
+      <block wx:for="{{messages}}" wx:key="id">
+        <view id="message-{{index}}" class="message-item">
+          <image class="avatar bot" src="{{item.avatarUrl}}" wx:if="{{item.sender === 'bot'}}" />
+          <view class="message-content">
+            <view class="chat-bubble {{item.sender}}">
+              {{item.content}}
+            </view>
+          </view>
+          <image class="avatar user" src="{{item.avatarUrl}}" wx:if="{{item.sender === 'user'}}" />
+        </view>
+      </block>
+  </scroll-view>
+
+  <!-- 诗句输入和提交按钮 -->
+  <view class="input-container" hidden="{{load}}">
+    <input class="input-poem" value="{{poetry}}" bindinput="input" placeholder="请输入诗句" disabled="{{!is_disable}}"></input>
+    <!--<input class="input-poem" value="{{poetry}}" bindinput="input" disabled="{{!is_disable}}"></input>-->
+    <button class="send-button" style="width:18vw" bindtap="commit" disabled="{{!is_disable}}">发 送</button>
+  </view>
+
+</view>

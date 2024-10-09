@@ -1,0 +1,79 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/study/study",
+    "pages/game/game",
+    "pages/rank/rank",
+    "pages/personal/personal",
+    "pages/recommendation/recommendation",
+    "pages/classification/classification",
+    "pages/popularity/popularity",
+    "pages/history/history",
+    "pages/logs/logs",
+    "pages/match/match",
+    "pages/searchResult/searchResult",
+    "pages/poetIntroduction/poetIntroduction",
+    "pages/DevelopmentofPoetry/DevelopmentofPoetry",
+    "pages/poetryDetail/poetryDetail",
+    "pages/poetDetail/poetDetail",
+    "pages/about/about"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "飞花令",
+    "navigationBarBackgroundColor": "#ffffff",
+    "enablePullDownRefresh": true
+  },
+  "tarBar": {
+    "list": [
+      {
+        "position": "top",
+        "pagePath": "pages/recommendation/recommendation",
+        "text": "推荐"
+      },
+      {
+        "postion": "top",
+        "pagePath": "pages/classification/classification",
+        "text": "分类"
+      },
+      {
+        "postion": "top",
+        "pagePath": "pages/popularity/popularity",
+        "text": "remen"
+      }
+    ]
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/study/study",
+        "text": "学习",
+        "iconPath": "images/学习.png",
+        "selectedIconPath": "images/学习-active.png"
+      },
+      {
+        "pagePath": "pages/match/match",
+        "text": "游戏",
+        "iconPath": "images/游戏.png",
+        "selectedIconPath": "images/游戏-active.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "排行榜",
+        "iconPath": "images/排行榜.png",
+        "selectedIconPath": "images/排行榜-active.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "images/我的.png",
+        "selectedIconPath": "images/我的-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

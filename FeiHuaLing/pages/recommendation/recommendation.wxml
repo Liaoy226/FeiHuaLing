@@ -1,0 +1,9 @@
+<!-- pages/recommendation/recommendation.wxml -->
+<view class="container">
+  <view class="background-image" style="background-image: url('{{backgroundImage}}');">
+    <!-- 背景图的容器 -->
+  </view>
+  <view class="texts">
+    <text>{{content}}</text>
+  </view>
+</view>

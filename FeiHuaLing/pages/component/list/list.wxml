@@ -1,0 +1,73 @@
+<view class="list">
+  <view class = "item">
+    <navigator url="/pages/recommendation/recommendation?id=1" >
+        <view class = "image">
+          <image src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E6%9C%88%E4%BA%AE.jpg?sign=3d5bf46ecff095e1c719a35d192a1159&t=1720412463" mode="widthFix"/>
+        </view>
+        <view class="info">
+          <text class = "content"> 月亮代表我的心
+          </text>
+        </view>
+    </navigator>
+    </view>
+      
+      <view class = "item">
+        <navigator url="/pages/recommendation/recommendation?id=2" >
+        <view class = "image">
+          <image src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E8%AF%97%E8%AF%8D.png?sign=fe892c671fd2ea596eedaa1fa2eb5755&t=1720411899" mode="widthFix"/>
+        </view>
+        <view class="info">
+          <text class = "content"> 诗词常识：五言绝句
+          </text>
+        </view>
+      </navigator>
+      </view>
+
+      <view class = "item">
+        <navigator url="/pages/recommendation/recommendation?id=3" >
+        <view class = "image">
+          <image src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E6%9D%8E%E7%99%BD.PNG?sign=a2aeb536e2bedc17a99331c772ac893c&t=1720411860" mode="widthFix"/>
+        </view>
+        <view class="info">
+          <text class = "content"> 诗人小知识：李白
+          </text>
+        </view>
+      </navigator>
+      </view>
+
+      <view class = "item">
+        <navigator url="/pages/recommendation/recommendation?id=4" >
+        <view class = "image">
+          <image src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E8%AF%97%E8%AF%8D%E9%87%8D%E8%A6%81%E6%80%A7.PNG?sign=18af2ca02e3ba4f6cb9826e762db0b26&t=1720411919" mode="widthFix"/>
+        </view>
+      <view class="info">
+        <text class = "content"> 为什么我们需要诗词？
+        </text>
+      </view>
+    </navigator>
+      </view>
+
+      <view class = "item">
+        <navigator url="/pages/recommendation/recommendation?id=5" >
+        <view class = "image">
+          <image src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E8%AF%97%E8%AF%8D%E7%94%9F%E6%B4%BB.PNG?sign=6ab5881e00fa520e31efa045da9504da&t=1720411774" mode="widthFix"/>
+        </view>
+      <view class="info">
+        <text class = "content"> 诗词与生活
+        </text>
+      </view>
+    </navigator>
+      </view>
+
+      <view class = "item">
+        <navigator url="/pages/recommendation/recommendation?id=6" >
+        <view class = "image">
+          <image src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E9%A3%9E%E8%8A%B1.jpg?sign=a776e1d1af306dceb7a1fcdb4c2d16ce&t=1720412493" mode="widthFix"/>
+        </view>
+      <view class="info">
+        <text class = "content"> 飞花令：传统与创新
+        </text>
+      </view>
+    </navigator>
+      </view>
+  </view>

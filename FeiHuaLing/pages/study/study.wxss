@@ -1,0 +1,186 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* 使用视口高度填充整个页面 */
+  margin: 0; /* 去除默认外边距 */
+  padding: 0; /* 去除默认内边距 */
+  width :100%
+}
+
+.container.with-background {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),url('https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/1.jpg?sign=797563d0b96d62db694a9fcbf9f797f7&t=1719124293');
+  background-size: cover; /* 背景图尺寸 */
+  background-position: center; /* 背景图位置 */
+  background-repeat: no-repeat; /* 不重复 */
+}
+
+
+/* 导航栏样式 */
+.navbar {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: auto;  /* 设置横向滚动 */
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* 导航栏项目样式 */
+.navbar-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  flex-shrink: 0;  /* 防止导航栏项目收缩 */
+  width: 100px;  /* 设置每个导航栏项目的宽度 */
+  text-align: center;  /* 居中对齐文字 */
+}
+
+/* 导航栏文字样式 */
+.navbar-item text {
+  font-size: 16px;
+  color: #333;
+}
+
+/* 选中导航栏项目的文字样式 */
+.navbar-item text.active {
+  color: #1aad19;
+  font-weight: bold;
+}
+
+/* 内容区样式 */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* 搜索框样式 */
+.search-box {
+  background-image: url('https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/26.jpg?sign=2e99f9bbca7cf095580671d0053e060b&t=1720254366');
+  padding: 0px; /* 增加上下内边距 */
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  width: 100%;
+  box-sizing: border-box; /* 包括内边距和边框在内的总宽度计算 */
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px; /* 调整内边距 */
+  margin-right: 10px; /* 增加右边距 */
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px; /* 调整字体大小 */
+}
+
+.search-btn {
+  padding: 10px 10px; /* 调整内边距 */
+  border: 2px solid #ccc; /* 设置按钮边框 */
+  background-color: transparent;
+  color: rgb(17, 12, 12);
+  font-size: 16px; /* 调整字体大小 */
+  cursor: pointer;
+  box-sizing: border-box; /* 包括内边距和边框在内的总宽度计算 */
+}
+
+.swiper
+{
+  width: 100%;
+  height: 200px; /* 根据需要调整轮播图高度 */
+}
+
+/* 诗人介绍按钮样式 */
+.poet-introduction-btn {
+  width: 5px; /* 按钮宽度 */
+  height: 250px; /* 按钮高度，与图片容器高度相同 */
+  color: rgb(22, 21, 21); /* 按钮文本颜色 */
+  font-size: 33px; /* 按钮文本字号 */
+  background-color:transparent; /* 设置按钮背景色为红色 */
+  border: none; /* 移除按钮边框 */
+  margin-top: 10px; /* 设置按钮与图片的垂直间距 */
+  margin-left: auto; /* 将按钮向右对齐 */
+  margin-right: auto; /* 将按钮向左对齐 */
+}
+
+/* 诗词发展按钮样式 */
+.poetry-introduction-btn {
+  width: 100px; /* 按钮宽度 */
+  height: 220px; /* 按钮高度，与图片容器高度相同 */
+  color: rgb(22, 21, 21); /* 按钮文本颜色 */
+  font-size: 33px; /* 按钮文本字号 */
+  background-color:transparent; /* 设置按钮背景色为红色 */
+  border: none; /* 移除按钮边框 */
+  margin-top: 0px; /* 设置按钮与图片的垂直间距为 20px */
+}
+
+/* 图片容器样式 */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px; /* 设置图片容器高度 */
+  margin-top: -3px; /* 设置按钮与图片的垂直间距 */
+}
+
+/* 图片样式 */
+.category-image {
+  width: 400px; /* 设置图片宽度 */
+}
+
+/* 诗人介绍图片样式 */
+.poet-image {
+  width: 400px; /* 设置图片宽度 */
+  height: 288.5px; /* 设置诗人图片高度 */
+  margin-top: 24px; /* 设置按钮与图片的垂直间距为 20px */
+}
+
+/* 诗词发展图片样式 */
+.poetry-image {
+  width: 400px; /* 设置图片宽度 */
+  height: 293px; /* 设置风景图片高度 */
+  margin-top: -5px; /* 设置按钮与图片的垂直间距为 20px */
+  margin-bottom: -8px; /* 设置按钮与图片的垂直间距为 20px */
+
+}
+
+
+.content-scroll {
+  flex: 1000; /* 使用剩余空间 */
+  overflow-y: auto; /* 允许垂直滚动 */
+}
+
+.collection-item {
+  padding: 10px;
+  border-bottom: 1px solid #851212;
+}
+
+.item-container {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+}
+
+.sentence-text {
+  flex:1; /* 诗词内容占据剩余空间 */
+  font-size: 18px; /* 设置字体大小 */
+  color: #333; /* 设置文字颜色 */
+  line-height: 1.5; /* 设置行高 */
+  margin-bottom: 0px; /* 设置下边距 */
+}
+
+.detail-button {
+  margin-left: 10px; /* 调整按钮和诗词内容之间的间距 */
+  color: rgb(197, 15, 15); /* 设置文字颜色 */
+  background-color: #e8f7ec; /* 设置按钮的背景色 */
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.text {
+  font-size: 20px; 
+  text-align: center;
+  color: #555555;
+}

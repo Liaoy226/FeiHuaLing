@@ -1,0 +1,71 @@
+/* 设置整个页面的背景颜色 */
+.page {
+  background-color: #f0f0f0;
+}
+
+/* 容器样式，设置内边距和背景图片 */
+.container {
+  padding: 20rpx;
+  /* 设置背景图片填充方式为居中并覆盖整个区域 */
+  background-size: cover;
+  /* 设置背景图片位置为居中 */
+  background-position: center;
+}
+
+/* 诗人信息部分样式 */
+.poet-info {
+  margin-bottom: 20rpx;
+  background-color: rgba(255, 255, 255, 0.514); /* 设置诗人信息部分的背景颜色及透明度 */
+  padding: 20rpx;
+  border-radius: 10rpx; /* 设置圆角 */
+}
+
+/* 诗人姓名样式 */
+.poet-name {
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #333333; /* 设置字体颜色 */
+}
+
+/* 诗人介绍样式 */
+.poet-description {
+  font-size: 33rpx;
+  line-height: 1.5;
+  color: #666666; /* 设置字体颜色 */
+  margin-bottom: 30rpx; /* 设置间距 */
+}
+
+/* 诗人其他信息样式 */
+.poet-other {
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #333333; /* 设置标题字体颜色 */
+  margin-bottom: 30rpx; /* 设置标题之间的间距 */
+}
+
+
+/* 诗人诗词标题样式 */
+.poem-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #2233cc; /* 设置标题字体颜色 */
+  margin-bottom: 10rpx; /* 设置标题之间的间距 */
+}
+
+/* 诗人诗词内容样式 */
+.poem-content {
+  font-size: 35rpx;
+  line-height: 1.5;
+  color: #2233cc; /* 设置内容字体颜色 */
+}
+
+/* 容器样式，用于设置诗词之间的间距 */
+.poem-container {
+  margin-bottom: 30rpx; /* 设置诗词之间的间距 */
+}
+
+
+/* 其他页面内容样式 */
+.other-content {
+  /* 添加其他内容的样式 */
+}

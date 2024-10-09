@@ -1,0 +1,18 @@
+<view class="container" style="background-image: {{poets[currentPoetIndex].backgroundImage}}">
+  <view class="poet-info">
+    <view class="poet-name">{{poets[currentPoetIndex].name}}</view>
+    <view class="poet-description">{{poets[currentPoetIndex].description}}</view>
+    <view class="poet-other">{{poets[currentPoetIndex].other}}</view>
+    <!-- 显示诗句标题和内容 -->
+    <view class="poet-poems">
+      <block wx:for="{{ poets[currentPoetIndex].poems }}" wx:key="index">
+        <view class="poem-container">
+          <view class="poem-title">{{ item.title }}</view>
+          <view class="poem-content">{{ item.content }}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 添加切换按钮 -->
+  <button bindtap="switchPoet">切换诗人</button>
+</view>

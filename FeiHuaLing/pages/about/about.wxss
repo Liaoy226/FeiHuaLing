@@ -1,0 +1,45 @@
+/* pages/about/about.wxss */
+page {
+  background-color: #f1f1f1;
+  background-image: url('https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/about-bg.jfif?sign=6e85210f72de0bbd7f4c93055c64335d&t=1719133052');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.box {
+  margin-top: 20px;
+}
+
+.title {
+  width: 90%;
+  font-size: 18px; 
+  margin-top: 15px;
+  margin-left: 15px;
+  text-align: 20px;
+  font-weight: bold;
+  border-bottom:  1rpx solid rgb(158, 158, 158);
+}
+
+.text {
+  width: 92%;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: rgb(83, 83, 83);
+  line-height: 1.8;
+  font-size: 15px; 
+  white-space: pre-wrap;
+  text-align: justify;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+  font-size: 22rpx;
+  margin: 30rpx 0;
+  color: gray;
+  margin-bottom: 50px;
+  height: 50px;
+}

@@ -1,0 +1,60 @@
+<!-- 导航栏 -->
+<view class="top-bg"></view>
+<view class="box">
+  <!-- 头像和昵称 -->
+  <view class="head-box">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+    <text class="nickName">{{nickName}}</text>
+  </view>
+  <!-- 第一部分列表 -->
+  <view>
+    <button class="row" style="width: 100%;" bindtap="recordClick">
+      <view class="left">
+        <image class="icon" src="../../images/icon/对战记录.png"></image> 
+        <text class="text" style="padding-left: 2px;">对战记录</text>
+      </view>
+      <view class="right">> </view>
+    </button>
+    <button class="row" style="width: 100%;" bindtap="clearClick">
+      <view class="left">
+        <image class="icon" src="../../images/icon/清空数据.png"></image> 
+        <text class="text" style="padding-left: 2px;">清空数据</text>
+      </view>
+      <view class="right">> </view>
+    </button>
+    <button class="row" style="width: 100%;" bindtap="aboutClick">
+      <view class="left">
+        <image class="icon" src="../../images/icon/使用说明.png"></image>
+        <text class="text" style="padding-left: 2px;">使用说明</text>
+      </view>
+      <view class="right">> </view>
+    </button>
+    <button class="row" open-type='feedback' style="width: 100%;">
+      <view class="left">
+        <image class="icon" src="../../images/icon/帮助与反馈.png"></image> 
+        <text class="text" style="padding-left: 2px;">意见反馈</text>
+      </view>
+      <view class="right">> </view>
+    </button>
+  </view>
+</view>
+<!-- 第二部分列表 -->
+<view class="end">
+  <button open-type="share" class="row" style="width: 100%;">
+    <view class="left">
+      <image class="icon" src="../../images/icon/分享好友.png"></image>
+      <text class="text" style="padding-left: 2px;">分享好友</text>
+    </view>
+    <view class="right">> </view>
+  </button>
+  <button open-type="contact" bindcontact="handleContact" session-from="sessionFrom" class="row" style="width: 100%;">
+    <view class="left">
+      <image class="icon" src="../../images/icon/在线客服.png"></image>
+      <text class="text" style="padding-left: 2px;">在线客服</text>
+    </view>
+    <view class="right">> </view>
+  </button>
+</view>
+<view class="footer">
+  <text>©微信小程序个人中心</text>
+</view>

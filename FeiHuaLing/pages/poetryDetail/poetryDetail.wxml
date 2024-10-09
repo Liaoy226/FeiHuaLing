@@ -1,0 +1,4 @@
+<!-- 示例 .wxml 文件 -->
+<view class="poetry-content">
+  <text>{{poetryContent}}</text>
+</view>

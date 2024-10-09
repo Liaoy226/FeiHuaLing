@@ -1,0 +1,8 @@
+<view class="container">
+  <image class="background" src="../../images/GameStart-Background.png" mode="aspectFill"></image>
+  <view class="content">
+    <image src="../../images/mode1.png" bindtap="computer" class="button" data-button="computer"></image>
+    <image src="../../images/mode2.png" bindtap="match" class="button" data-button="match"></image>
+  </view>
+  <text class="prompt-text">{{prompt}}</text>
+</view>

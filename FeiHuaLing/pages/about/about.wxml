@@ -1,0 +1,10 @@
+<!--pages/about/about.wxml-->
+<view class="box">
+  <view class="inform" wx:for="{{infos}}" wx:key="index">
+    <view class="title">{{item.title}}</view>
+    <view class="text" decode="{{true}}">{{item.text}}</view>
+  </view>
+</view>
+<view class="footer">
+  <text wx:if="{{version}}">版本号：{{version}}</text>
+</view>

@@ -1,0 +1,73 @@
+<view class="list">
+  <view class = "item">
+    <navigator url="/pages/recommendation/recommendation?id=1" >
+        <view class = "image">
+          <image src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E9%9D%99%E5%A4%9C%E6%80%9D.jpg?sign=d873f5cf8d164693e89046211b356a20&t=1719125079" mode="widthFix"/>
+        </view>
+        <view class="info">
+          <text class = "content">月你在一起：诗词赏析
+          </text>
+        </view>
+    </navigator>
+    </view>
+      
+      <view class = "item">
+        <navigator url="/pages/recommendation/recommendation?id=2" >
+        <view class = "image">
+          <image src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E4%BA%94%E8%A8%80%E7%BB%9D%E5%8F%A5bg.jpg?sign=e51da813fc2ef8699e3ffde5997df47f&t=1719125094" mode="widthFix"/>
+        </view>
+        <view class="info">
+          <text class = "content">诗词小常识：五言绝句
+          </text>
+        </view>
+      </navigator>
+      </view>
+
+      <view class = "item">
+        <navigator url="/pages/recommendation/recommendation?id=3" >
+        <view class = "image">
+          <image src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E6%9D%8E%E7%99%BDbg.png?sign=d11b907db2c4591b03bcfcca78074c86&t=1719125191" mode="widthFix"/>
+        </view>
+        <view class="info">
+          <text class = "content">每日诗人小知识：李白
+          </text>
+        </view>
+      </navigator>
+      </view>
+
+      <view class = "item">
+        <navigator url="/pages/recommendation/recommendation?id=4" >
+        <view class = "image">
+          <image src="https://imgur.com/GXYZAr3.jpg" mode="widthFix"/>
+        </view>
+      <view class="info">
+        <text class = "content"> 为什么我们需要诗词？
+        </text>
+      </view>
+    </navigator>
+      </view>
+
+      <view class = "item">
+        <navigator url="/pages/recommendation/recommendation?id=5" >
+        <view class = "image">
+          <image src="https://imgur.com/GXYZAr3.jpg" mode="widthFix"/>
+        </view>
+      <view class="info">
+        <text class = "content"> 知古鉴今：诗词与生活
+        </text>
+      </view>
+    </navigator>
+      </view>
+
+      <view class = "item">
+        <navigator url="/pages/recommendation/recommendation?id=6" >
+        <view class = "image">
+          <image src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E9%A3%9E%E8%8A%B1%E4%BB%A4.jpg?sign=87d5ce31ef4aab581bb74c384fcd76ec&t=1719125294" mode="widthFix"/>
+        </view>
+      <view class="info">
+        <text class = "content"> 飞花令：“传统与创新”
+        </text>
+      </view>
+    </navigator>
+      </view>
+  </view>

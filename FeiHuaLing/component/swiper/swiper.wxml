@@ -1,0 +1,47 @@
+<view class='swiper'>
+  <swiper
+    class="myswiper"
+    indicator-dots = " {{ indicatorDots }}"
+    autoplay="{{ autoplay }}"
+    interval="{{ interval }}"
+    duration="{{ duration }}"
+    indicator-color="#1203"
+    indicator-active-color="#111"
+  >
+    <swiper-item>
+          <image mode="widthFix" src=""
+          style="width: 100%; height: 200px;">
+          </image>
+      </swiper-item>
+      <swiper-item>
+          <image mode="widthFix" src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E8%BD%AE%E6%92%AD%E5%9B%BE1.png?sign=3a5f0214dfc1d78c7e24ceb2f59b8d49&t=1719125337"
+          style="width: 100%; height: 200px;">
+          </image>
+      </swiper-item>
+      <swiper-item>
+          <image mode="widthFix" src="https://imgur.com/DWCqkj4.jpg"
+          style="width: 100%; height: 200px;">
+          </image>
+      </swiper-item>
+      <swiper-item>
+          <image mode="widthFix" src="https://imgur.com/DWCqkj4.jpg"
+          style="width: 100%; height: 200px;">
+          </image>
+      </swiper-item>
+      <swiper-item>
+          <image mode="widthFix" src="https://imgur.com/DWCqkj4.jpg"
+          style="width: 100%; height: 200px;">
+          </image>
+      </swiper-item>
+      <swiper-item>
+          <image mode="widthFix" src="https://imgur.com/DWCqkj4.jpg"
+          style="width: 100%; height: 200px;">
+          </image>
+      </swiper-item>
+      <swiper-item>
+          <image mode="widthFix" src="https://imgur.com/DWCqkj4.jpg"
+          style="width: 100%; height: 200px;">
+          </image>
+      </swiper-item>
+      </swiper>
+</view>

@@ -1,0 +1,54 @@
+
+
+/* 设置整个页面的背景颜色 */
+.page {
+  background-color: #f0f0f0;
+}
+
+/* 容器样式，设置内边距和背景图片 */
+.container {
+  padding: 20rpx;
+  /* 设置背景图片填充方式为居中并覆盖整个区域 */
+  background-size: cover;
+  /* 设置背景图片位置为居中 */
+  background-position: center;
+}
+
+/* 底部样式 */
+.pages-info {
+  margin-bottom: 20rpx;
+  background-color: rgba(255, 255, 255, 0.514); /* 设置诗人信息部分的背景颜色及透明度 */
+  padding: 20rpx;
+  border-radius: 10rpx; /* 设置圆角 */
+}
+
+/* 标题样式 */
+.pages-title {
+  font-size: 55rpx;
+  font-weight: bold;
+  color: #333333; /* 设置字体颜色 */
+  margin-bottom: 40rpx; /* 设置间距 */
+}
+
+/* 介绍样式 */
+.pages-content1 {
+  font-size: 34rpx;
+  line-height: 1.5;
+  color: #554f4f; /* 设置字体颜色 */
+  margin-bottom: 30rpx; /* 设置间距 */
+}
+
+/* 其他信息样式 */
+.pages-content2 {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #664719; /* 设置标题字体颜色 */
+  margin-bottom: 30rpx; /* 设置标题之间的间距 */
+}
+
+
+
+/* 其他页面内容样式 */
+.other-content {
+  /* 添加其他内容的样式 */
+}

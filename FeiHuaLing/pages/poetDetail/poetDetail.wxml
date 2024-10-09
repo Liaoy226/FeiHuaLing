@@ -1,0 +1,4 @@
+<!--pages/poetDetail/poetDetail.wxml-->
+<view class="poet-content">
+  <text>{{poetContent}}</text>
+</view>

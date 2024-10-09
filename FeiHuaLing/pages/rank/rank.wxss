@@ -1,0 +1,122 @@
+.container {
+  padding: 50rpx;
+  background-image: url('https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E8%83%8C%E6%99%AF2.jpg?sign=6d28a297e538a3dc9891c0257f04a402&t=1720189119');
+  background-size: cover; /* 使背景图片覆盖整个容器 */
+  background-position: center; /* 使背景图片居中 */
+  background-repeat: no-repeat; /* 防止背景图片重复 */
+  min-height: 100vh;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  padding: 10rpx;
+}
+
+.tab-button {
+  flex: 1;
+  margin: 0 10rpx;
+  padding: 20rpx;
+  background-color: #f0f0f0;
+  color: #000000;
+  border: none;
+  border-radius: 5rpx;
+}
+
+.tab-button.active {
+  background-color: #7fb5a9;
+  color: #ffffff;
+}
+
+.poem-list, .poet-list {
+  padding: 5rpx;
+  justify-content: center; 
+}
+
+.poem-item {
+  width: 500rpx; /* 设置框的宽度 */
+  height: 100rpx; /* 设置框的高度 */
+  padding: 30rpx;
+  border: 2rpx solid #f0f0f0;
+  border-radius: 10rpx;
+  background-color: #f0f0f0;
+  margin-bottom: 20rpx;
+  margin: 20rpx auto;
+  display: flex;
+
+}
+
+.poet-item {
+  width: 500rpx; /* 设置框的宽度 */
+  height: 100rpx; /* 设置框的高度 */
+  padding: 30rpx;
+  border: 2rpx solid #f0f0f0;
+  border-radius: 10rpx;
+  background-color: #f0f0f0;
+  margin: 20rpx auto; /* 上下的外边距为 20rpx，左右的外边距为 auto，用于水平居中 */
+  display: flex;
+}
+
+
+.poem-item .left, .poet-item {
+  flex: 1;
+}
+
+.info {
+  flex: 1;
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+}
+
+.poem-name {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.poem-lines {
+  font-size: 22rpx;
+  color: #808080;
+}
+
+.poem-author  {
+  font-size: 28rpx;
+  color: #808080;
+}
+
+.name {
+  font-size: 28rpx;
+  color: #000000;
+  font-weight: bold;
+}
+.dynasty {
+  font-size: 24rpx;
+  color: #808080;
+}
+
+.poet-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.left {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  width: 150rpx;
+  text-align: right;
+  grid-column: 3; /* 沿着第三列放置 */
+}
+
+.hot-label {
+  font-size: 22rpx;
+  color: #524e4e;
+  text-align: right;
+  margin-bottom: 5rpx;
+}

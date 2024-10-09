@@ -1,0 +1,79 @@
+<view class="container {{currentCategoryIndex === 2 ? 'with-background' : ''}} {{currentCategoryIndex === 1 ? 'with-background2' : ''}}">
+  <!-- 顶部横向滑动导航栏 -->
+  <scroll-view class="navbar" scroll-x="true" scroll-y="false" enable-flex style="flex-direction: row;" scroll-with-animation="true">
+    <!-- 导航栏项目 -->
+    <view class="navbar-item" wx:for="{{categories}}" wx:key="id" bindtap="onCategoryTap" data-index="{{index}}">
+      <!-- 当前选中项目添加 active 类 -->
+      <text class="{{currentCategoryIndex === index ? 'active' : ''}}">{{item.name}}</text>
+    </view>
+  </scroll-view>
+
+  <!-- 收藏内容展示，添加滚动条 -->
+
+  <scroll-view class="content-scroll" wx:if="{{currentCategoryIndex === 2}}" scroll-y="true">
+    <block wx:if="{{collections.length === 0}}">
+      <view class="text-container">
+        <text class="text">暂无收藏内容</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view wx:for="{{collections}}" class="collection-item">
+        <view class="item-container" bindlongpress="delete" data-index="{{index}}">
+          <text class="sentence-text">{{item.sentence}}</text>
+          <!-- 将 item.poetry 作为 data-poetry 自定义属性传递给按钮 -->
+          <button bindtap="navigateToDetail" data-history="{{index}}" data-message="{{index}}" data-poetry="{{item.poetry}}" class="detail-button" style="width:16vw">品诗</button>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+
+  <!--轮播图，只在“推荐”界面显示-->
+
+  <view class="swiper" wx:if="{{currentCategoryIndex === 0}}">
+    <view class="nav" wx:if="{{currentCategoryIndex === 0}}">
+    <swiper
+        indicatorDots ="{{ swiperOptions.indicatorDots}}"
+        autoplay ="{{ swiperOptions.autoplay }}"
+        interval="{{swiperOptions.interval}}"
+        duration="{{swiperOptions.duration}}"
+        >
+      </swiper>
+      </view>
+        <!--推荐内容展示-->
+      <view class="nav" wx:if="{{currentCategoryIndex === 0}}">
+        <list>
+        </list>
+      </view>
+  </view>
+
+     <!-- 搜索框，只在“分类”界面显示 -->
+     <view class="search-box" wx:if="{{isCategoryPage}}">
+    <input class="search-input" placeholder="请输入诗词中的某个字" bindinput="onSearchInput"></input>
+    <button class="search-btn" bindtap="onSearchSubmit" style="width:80px">搜索</button>
+  </view>
+  
+  <!-- 新增诗人介绍按钮 -->
+  <view class="poet-introduction" wx:if="{{isCategoryPage}}">
+    <button class="poet-introduction-btn" bindtap="onPoetIntroduction">诗人介绍</button>
+  </view>
+
+  <!-- 图片和按钮显示在分类界面中间 -->
+  <view class="image-container" wx:if="{{isCategoryPage}}">
+    <view class="image-wrapper">
+      <image class="category-image poet-image" src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/50.jpeg?sign=4b179c6cc35a8f840d33f63bb688acc3&t=1720257335"></image>
+      <image class="category-image poetry-image" src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/51.jpeg?sign=5686af28b7527488ff3d8aace355efd7&t=1720257418"></image>
+    </view>
+  </view>
+
+   <!-- 诗词介绍按钮 -->
+   <view class="poetry-introduction" wx:if="{{isCategoryPage}}">
+    <button class="poetry-introduction-btn" bindtap="onDevelopmentofPoetry">诗词发展</button>
+  </view>
+
+  <!-- 内容区，根据当前选中的导航栏项目显示不同内容 -->
+  <view class="content">
+    <!-- 根据页面类型显示不同的文字 -->
+    <text wx:if="{{isHotPage}}">热门内容展示</text>
+  </view>
+</view>

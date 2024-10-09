@@ -1,0 +1,60 @@
+<!--pages/history/history.wxml-->
+<!-- return -->
+<view>
+  <view wx:for="{{history}}" wx:for-item="i" wx:for-index="h_i">
+    <button wx:if="{{!i.open}}" bindtap="open" data-h_i="{{h_i}}" class="row" style="width: 80%;" bindlongpress="delete" data-h_i="{{h_i}}">
+      <view>
+        <!--模式、关键字和分数显示-->
+        <view class="mode-keyword-score">
+          <text class="mode">{{i.mode}}模式</text>
+          <text class="keyword">{{i.keyword}}</text>
+          <text class="score">{{i.score}}</text>
+        </view>
+        <!--时间和详情显示-->
+        <view class="time-expand">
+          <text class="time">{{i.time}}</text>
+          <text class="expand">详情 ></text>
+        </view>
+      </view>
+    </button>
+    <button wx:if="{{i.open}}" bindtap="close" data-h_i="{{h_i}}" class="row" style="width: 90%;" bindlongpress="delete" data-h_i="{{h_i}}">
+      <view>
+        <!--模式、关键字和分数显示-->
+        <view class="mode-keyword-score">
+          <text class="mode">{{i.mode}}模式</text>
+          <text class="keyword">{{i.keyword}}</text>
+          <text class="score">{{i.score}}</text>
+        </view>
+        <!--时间和详情显示-->
+        <view class="time-expand">
+          <text class="time">{{i.time}}</text>
+          <text class="expand">详情 ></text>
+        </view>
+      </view>
+    </button>
+    <!--记录显示-->
+    <view wx:if="{{i.open}}" class="battle">
+      <!--有记录-->
+      <block wx:if="{{i.answers && i.answers.length > 0}}">
+        <block wx:for="{{i.answers}}" wx:key="id" wx:for-index="m_i">
+          <view id="message-{{index}}" class="message-item">
+            <image class="avatar bot" src="{{item.avatarUrl}}" wx:if="{{item.sender === 'bot'}}" />
+            <view class="message-content">
+              <view class="chat-bubble {{item.sender}}" bindlongpress="collect" data-history="{{h_i}}" data-message="{{m_i}}">
+              {{item.content}}
+              </view>
+            </view>
+            <image class="avatar user" src="{{item.avatarUrl}}" wx:if="{{item.sender === 'user'}}" />
+          </view>
+        </block>
+      </block>
+      <!--无记录-->
+      <block wx:else class="no-record">
+        <text class="text">{{empty}}</text>
+      </block>
+    </view>
+  </view>
+</view>
+<view class='bottom-blank' style='opacity: 0;'>
+  <text>{{empty}}</text>
+</view>

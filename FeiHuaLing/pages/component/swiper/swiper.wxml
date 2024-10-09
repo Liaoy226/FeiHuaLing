@@ -1,0 +1,41 @@
+<view class='swiper'>
+  <swiper
+    class="myswiper"
+    indicator-dots = " {{ indicatorDots }}"
+    autoplay="{{ autoplay }}"
+    interval="{{ interval }}"
+    duration="{{ duration }}"
+    image="{{image}}"
+    indicator-color="#1203"
+    indicator-active-color="#111"
+  >
+    <swiper-item>
+      <navigator url="/pages/recommendation/recommendation?id=7" >
+          <image mode="widthFix" src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E8%BD%AE%E6%92%AD%E5%9B%BE1.png?sign=7e53d2a6931dae02b80b4de77effbefb&t=1719124995"
+          style="width: 100%; height: 200px;">
+          </image>
+      </navigator>
+      </swiper-item>
+      <swiper-item>
+        <navigator url="/pages/recommendation/recommendation?id=8" >
+          <image mode="widthFix" src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E8%BD%AE%E6%92%AD%E5%9B%BE2.png?sign=39020b268b5f0ea4cb93db8fc30c82da&t=1719125005"
+          style="width: 100%; height: 200px;">
+          </image>
+        </navigator>
+      </swiper-item>
+      <swiper-item>
+        <navigator url="/pages/recommendation/recommendation?id=9" >
+          <image mode="widthFix" src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E8%BD%AE%E6%92%AD%E5%9B%BE3.png?sign=0fdddfbf4b06a377ac1db7c27d72e295&t=1719125017"
+          style="width: 100%; height: 200px;">
+          </image>
+        </navigator>
+      </swiper-item>
+      <swiper-item>
+        <navigator url="/pages/recommendation/recommendation?id=10" >
+          <image mode="widthFix" src="https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/%E8%BD%AE%E6%92%AD%E5%9B%BE4.png?sign=7595fdf4f24372908ee168cf9e58e8df&t=1719125042"
+          style="width: 100%; height: 200px;">
+          </image>
+        </navigator>
+      </swiper-item>
+      </swiper>
+</view>

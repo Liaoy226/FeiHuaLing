@@ -1,0 +1,34 @@
+/* pages/recommendation/recommendation.wxss */
+.container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  width: 100vw; /* 视窗宽度 */
+  height: 100vh; /* 视窗高度 */
+  position: relative; /* 为绝对定位的子元素提供参照 */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* 让背景图铺满整个容器 */
+  background-position: center; /* 背景图居中显示 */
+  opacity: 0.5;
+}
+
+.texts {
+  z-index: 1; /* 设置文字内容在背景图之上 */
+  text-align: left; 
+  color: #000000; /* 设置文字颜色为黑色 */
+  font-size: 17px; /* 设置文字大小 */
+  padding: 10px; /* 设置文字内容的内边距 */
+  width: 90vw; /* 宽度为视窗宽度的90% */
+  height: 90vh; /* 高度为视窗高度的100% */
+  overflow-y: auto; /* 允许垂直滚动 */
+  background: rgba(255, 255, 255, 0.5); /* 增加一个半透明的背景色，提升文字可读性 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 增加阴影效果 */
+  border-radius: 10px; /* 添加圆角 */
+}

@@ -1,0 +1,35 @@
+Component(
+  {
+    properties:
+    {
+      indicatorDots:
+      {
+        type:Boolean,
+        value:false
+      },
+      autoplay:
+      {
+        type:Boolean,
+        value:false
+      },
+      interval:
+      {
+        type:Number,
+        value:5000
+      },
+      duration:
+      {
+        type:Number,
+        value:300
+      }
+    },
+    data:
+    {
+
+    },
+    methods:
+    {
+
+    }
+  }
+)

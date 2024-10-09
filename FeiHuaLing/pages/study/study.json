@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "swiper":"../component/swiper/swiper",
+    "van-grid":"../study/miniprogram_npm/@vant/weapp/lib/grid/index",
+    "van-grid-item":"../study/miniprogram_npm/@vant/weapp/lib/grid-item/index",
+    "list":"../component/list/list"
+  }
+}

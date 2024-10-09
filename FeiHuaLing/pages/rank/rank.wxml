@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="buttons">
+    <button bindtap="showPoemRank" class="tab-button {{currentTab === 'poem' ? 'active' : ''}}">诗词热门榜</button>
+    <button bindtap="showPoetRank" class="tab-button {{currentTab === 'poet' ? 'active' : ''}}">诗人热门榜</button>
+  </view>
+
+  <scroll-view scroll-y="true" style="height: 80vh;">
+    <view wx:if="{{currentTab === 'poem'}}">
+      <view class="poem-list">
+        <block wx:for="{{poemRank}}" wx:key="index">
+          <view class="poem-item" bindtap="navigateToPoetryDetail" data-url="{{item.url}}">
+            <view class="left">
+              <view class="poem-name">{{item._id}}</view>
+              <view class="poem-lines">{{item.mostUsedLine}}</view>
+              <view class="poem-author">{{item.author}}</view>
+            </view>
+            <view class="right">
+              <view class="hot-label">热度值</view>
+              {{item.totalTimes}}
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view wx:if="{{currentTab === 'poet'}}">
+      <view class="poet-list">
+        <block wx:for="{{poetRank}}" wx:key="index">
+          <view class="poet-item" bindtap="navigateToPoetDetail" data-url="{{item.url}}">
+            <image class="poet-avatar" src="{{item.avatar}}"></image>
+            <view class="info">
+              <view class="name">{{item.name}}</view>
+              <view class="dynasty">{{item.dynasty}}</view>
+            </view>
+            <view class="right">
+              <view class="hot-label">热度值</view>
+              {{item.times}}
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,313 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 确保背景图片在内容后面 */
+}
+
+.content {
+  z-index: 1; /* 确保内容在背景图片上面 */
+  text-align: center;
+}
+
+.choice {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px; /* 调整与上方内容的间距 */
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* 调整各个选项之间的间距 */
+}
+
+.radio-style {
+  margin-right: 5px; /* 调整 radio 按钮与文字之间的间距 */
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+.score-item {
+  display: flex;
+  align-items: center;
+}
+
+.score-and-countdown {
+  display: flex; 
+  justify-content: flex-start;
+}
+
+.label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 5px;
+}
+
+.value {
+  font-size: 18px;
+  color: #666;
+}
+
+
+.start-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 0px;
+  gap: 10px; /* 按钮之间的间距 */
+}
+
+.input-wapper {
+  flex: 1;
+  gap: 10px;
+}
+
+.input-keyword {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 15px;
+  border: 1px solid rgb(158, 158, 158);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px; /* 按钮之间的间距 */
+}
+
+.button {
+  height: 36px;
+  line-height: 36px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.random-btn {
+  background-color: #7fb5a9;
+  color: #fff;
+}
+
+.begin-btn {
+  background-color: #7fb5a9;
+  color: #fff;
+}
+
+.end-btn {
+  background-color: #7fb5a9;
+  color: #fff;
+}
+
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 62vh; 
+  max-height: 62vh; /*最大高度，超出部分会出现滚动条 */
+  overflow: hidden; /* 隐藏超出部分，确保滚动区域内滚动 */
+  border: 1px solid #ccc; /* 可选的边框样式 */
+  margin-top: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-item {
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-bubble {
+  min-width: 10%; /* 聊天气泡宽度 */
+  max-width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  word-wrap: break-word; /* 自动换行 */
+  margin-bottom: 5px; /* 消息间的间距 */
+  position: absolute;
+}
+
+.chat-bubble.user {
+  background-color: #7fb5a9; /* 用户消息气泡颜色 */
+  color: rgb(255, 255, 255);
+  align-self: flex-end; /* 用户消息气泡靠右显示 */
+  right: 70px;
+}
+
+.chat-bubble.bot {
+  background-color: #ADD8E6; /* 机器人消息气泡颜色 */
+  color: black;
+  align-self: flex-start; /* 机器人消息气泡靠左显示 */
+  left: 70px;
+}
+
+.chat-bubble.user::before {
+  content: '';
+  position: absolute;
+  right: -35rpx; /* 左侧偏移量 */
+  top: 50%; /* 垂直居中 */
+  transform: translateY(-50%) rotate(90deg); /* 逆时针旋转90度 */
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border: 18rpx solid;
+  border-color: transparent transparent #7fb5a9 transparent;
+}
+
+.chat-bubble.bot::before {
+  content: '';
+  position: absolute;
+  left: -35rpx; /* 左侧偏移量 */
+  top: 50%; /* 垂直居中 */
+  transform: translateY(-50%) rotate(-90deg); /* 逆时针旋转90度 */
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border: 18rpx solid;
+  border-color: transparent transparent #ADD8E6 transparent;
+}
+
+.avatar.user {
+  margin-left: auto; /* 用户头像靠消息框右边界 */
+}
+
+.avatar.bot {
+  margin-right: auto; /* 机器人头像靠消息框左边界 */
+}
+
+/* 容器样式 */
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 输入框样式 */
+.input-poem {
+  flex: 1;
+  padding: 20rpx;
+  margin-right: 10rpx; /* 与按钮之间的间距 */
+  font-size: 32rpx;
+  border: 1rpx solid rgb(0, 0, 0);
+  border-radius: 10rpx;
+  box-shadow: 0 5rpx 10rpx rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.score-and-countdown {
+  display: flex; 
+  justify-content: flex-start;
+}
+
+/* 按钮样式 */
+.send-button {
+  font-size: 35rpx;
+  background-color: #7fb5a9;
+  color: #fff;
+  border: none;
+  box-shadow: 0 5rpx 10rpx rgba(0, 0, 0, 0.1);
+  text-align: center;
+  white-space: nowrap; /* 确保按钮文字不换行 */
+  display: flex; /* 使用 flex 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  height: 90rpx; /* 确保有足够的高度以实现垂直居中 */
+  width: 200rpx; /* 根据需要设置宽度 */
+}
+
+/* 按钮禁用样式 */
+.send-button:disabled {
+  background-color: #ccc;
+}
+
+/* 倒计时容器样式 */
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx;
+  margin: 20rpx 0;
+  border-radius: 15rpx; /* 圆角边框 */
+}
+
+/* 倒计时文本样式 */
+.countdown-text {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #007aff; /* 文字颜色 */
+  text-align: center;
+}
+
+.match-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.vs {
+  font-size: 20px;
+  color: #555;
+  margin: 0 10px;
+}

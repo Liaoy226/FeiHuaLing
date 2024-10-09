@@ -1,0 +1,55 @@
+/* pages/index/index.wxss */
+
+.container {
+  padding: 20px;
+  /* 设置背景图片填充方式为居中并覆盖整个区域 */
+  background-size: cover;
+  /* 设置背景图片位置为居中 */
+  background-position: center;
+}
+
+.poem-item {
+  padding: 10px;
+  border: 1px solid rgb(35, 158, 117);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: rgb(156, 96, 6);
+  font-family: "Arial", sans-serif;
+}
+
+.poem-item:nth-child(odd) {
+  background-color: rgb(252, 248, 240);
+}
+
+.poem-item:nth-child(even) {
+  background-color: rgb(241, 253, 253);
+}
+
+.page-info {
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  background-color:  rgb(241, 253, 253);
+  color: rgb(5, 4, 4);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+.load-more {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.button:hover {
+  background-color: rgb(164, 224, 199);
+  color: rgb(0, 0, 0);
+}

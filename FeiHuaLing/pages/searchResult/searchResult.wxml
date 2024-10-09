@@ -1,0 +1,28 @@
+<!-- pages/index/index.wxml -->
+<view class="container" style="background-image: {{backgroundImage}}">
+  <!-- 搜索结果 -->
+  <view class="poem-list">
+    <block wx:for="{{ poems }}" wx:key="index">
+      <view class="poem-item" bindlongpress="collect" bindtap="detail" data-poem="{{index}}">{{ item }}</view>
+    </block>
+    <view wx:if="{{ poems.length === 0 }}">暂无搜索结果</view>
+  </view>
+
+  <!-- 显示当前页数和总页数 -->
+  <view class="page-info">
+    当前页数：{{ currentPage }} / 共 {{ totalPages }} 页
+  </view>
+
+  <!-- 上一页和下一页按钮放置在同一个容器内 -->
+  <view class="button-container">
+    <!-- 上一页按钮 -->
+    <view class="load-more">
+      <button class="button" bindtap="loadLastPage" hidden="{{currentPage == 1}}">上一页</button>
+    </view>
+    
+    <!-- 下一页按钮 -->
+    <view class="load-more">
+      <button class="button" bindtap="loadNextPage" hidden="{{currentPage >= totalPages}}">下一页</button>
+    </view>
+  </view>
+</view>

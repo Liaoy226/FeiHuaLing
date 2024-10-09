@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 确保背景图片在内容后面 */
+}
+
+.content {
+  z-index: 1; /* 确保内容在背景图片上面 */
+  text-align: center;
+}
+
+.button {
+  width: 320px; /* 按需调整宽度 */
+  height: 200px; /* 按需调整高度 */
+  margin: 10px 0;
+}
+
+.button:active {
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+text {
+  color: #fff; /* 根据需要调整文字颜色以确保可读性 */
+  margin-top: 20px;
+}
+
+.prompt-text {
+  font-size: 30px; /* 设置字体大小 */
+  font-weight: bold; /* 设置字体粗细 */
+  text-align: center; /* 设置文字居中 */
+}

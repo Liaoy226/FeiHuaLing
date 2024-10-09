@@ -1,0 +1,11 @@
+
+<view class="container" style="background-image: url({{pages[currentPageIndex].backgroundImage}})">
+  <view class="pages-info">
+    <view class="pages-title">{{pages[currentPageIndex].title}}</view>
+    <view class="pages-content1">{{pages[currentPageIndex].content1}}</view>
+    <view class="pages-content2">{{pages[currentPageIndex].content2}}</view>
+  </view>
+  <!-- 添加切换按钮 -->
+  <button bindtap="switchPages">切换</button>
+</view>
+

@@ -1,0 +1,159 @@
+/* pages/history/history.wxss */
+page {
+  background-image: url('https://636c-cloud1-2gpac81i40983a59-1327119078.tcb.qcloud.la/images/history-bg.jpeg?sign=0b6c8e87a511a4543b7eac6922695b93&t=1720516038');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.row {
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  border: 1rpx solid gray;
+}
+
+.mode-keyword-score {
+  position: relative;
+  height: 30px;
+}
+
+.mode {
+  font-size: 17px;
+  position: absolute;
+  left: 0px;
+  color: #444444;
+}
+
+.keyword {
+  position: absolute;
+  left: 130px;
+  font-size: 13px;
+  display: inline-block;
+  padding: 5px 8px;
+  color: #004d00;
+  border: 2px solid gray;
+  border-radius: 50%;
+}
+
+.score {
+  position: absolute;
+  right: 0px;
+  font-size: 15px;
+  color: #a52812;
+}
+
+.time-expand {
+  margin-top: 5px;
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.time {
+  order: 1;
+  font-size: 11px;
+  color: rgb(85, 84, 84);
+}
+
+.expand {
+  order: 2;
+  font-size: 11px;
+  color: rgb(85, 84, 84);
+}
+
+.battle {
+  margin-top: 10px;
+}
+
+.no-record {
+  margin-top: 10px;
+}
+
+.text {
+  margin-left: 40%;
+  color: #444444;
+}
+
+.message-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #999999;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  background-color: #f1f1f1;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar.user {
+  margin-left: auto; /* 用户头像靠消息框右边界 */
+}
+
+.avatar.bot {
+  margin-right: auto; /* 机器人头像靠消息框左边界 */
+}
+
+.chat-bubble {
+  min-width: 10%; /* 聊天气泡宽度 */
+  max-width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  word-wrap: break-word; /* 自动换行 */
+  margin-bottom: 5px; /* 消息间的间距 */
+  position: absolute;
+}
+
+.chat-bubble.user {
+  background-color: #7fb5a9; /* 用户消息气泡颜色 */
+  color: rgb(255, 255, 255);
+  align-self: flex-end; /* 用户消息气泡靠右显示 */
+  right: 70px;
+}
+
+.chat-bubble.bot {
+  background-color: #ADD8E6; /* 机器人消息气泡颜色 */
+  color: black;
+  align-self: flex-start; /* 机器人消息气泡靠左显示 */
+  left: 70px;
+}
+
+.chat-bubble.user::before {
+  content: '';
+  position: absolute;
+  right: -35rpx; /* 左侧偏移量 */
+  top: 50%; /* 垂直居中 */
+  transform: translateY(-50%) rotate(90deg); /* 逆时针旋转90度 */
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border: 18rpx solid;
+  border-color: transparent transparent #7fb5a9 transparent;
+}
+
+.chat-bubble.bot::before {
+  content: '';
+  position: absolute;
+  left: -35rpx; /* 左侧偏移量 */
+  top: 50%; /* 垂直居中 */
+  transform: translateY(-50%) rotate(-90deg); /* 逆时针旋转90度 */
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border: 18rpx solid;
+  border-color: transparent transparent #ADD8E6 transparent;
+}
+
+.bottom-blank {
+  margin-top: 30px;
+}
